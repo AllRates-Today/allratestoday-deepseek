@@ -10,7 +10,7 @@ DeepSeek 的 Chat Completions API 与 OpenAI 兼容，因此同一套 function c
 - *"把 1000 英镑换成日元"*
 - *"过去 30 天美元兑印度卢比的走势如何？"*
 
-由 [AllRatesToday API](https://allratestoday.com) 提供数据支持 —— 160+ 种货币、来自 Reuters/Refinitiv 的中间价、两个公共接口无需 API 密钥。
+由 [AllRatesToday API](https://allratestoday.com) 提供数据支持 —— 160+ 种货币、机构级银行间市场中间价、两个公共接口无需 API 密钥。
 
 ## 安装
 
