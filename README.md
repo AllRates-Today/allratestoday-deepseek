@@ -203,6 +203,8 @@ Common API statuses: `401` missing or invalid key · `429` rate limit or monthly
 - **Support:** [allratestoday.com/contact](https://allratestoday.com/contact)
 - **MCP server:** [`@allratestoday/mcp-server`](https://www.npmjs.com/package/@allratestoday/mcp-server) — for Claude Code, Cursor and Claude Desktop
 - **JavaScript SDK:** [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk)
+- **AI agents:** Claude Code plugin `/plugin marketplace add AllRates-Today/claude-code-plugin` · hosted MCP endpoint `https://allratestoday.com/api/mcp` (keyless)
+
 
 ## 📜 License
 
