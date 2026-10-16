@@ -177,7 +177,7 @@ except AllRatesTodayError as err:
 | `AllRatesTodayError` | Any non-2xx from the API; carries `.status` and `.body`. |
 | `AllRatesTodayError` | An authenticated endpoint was called with no AllRatesToday key. |
 
-Common API statuses: `401` missing or invalid key · `429` rate limit or monthly quota exceeded · `5xx` upstream error.
+Common API statuses: `401` missing or invalid key · `429` rate limit or plan quota exceeded (the free tier is 300 requests in total, not per month) · `5xx` upstream error.
 
 ## 💡 Notes
 
@@ -191,7 +191,7 @@ Common API statuses: `401` missing or invalid key · `429` rate limit or monthly
 
 **Compatibility** — any DeepSeek model that supports function calling; `deepseek-chat` is the default and `deepseek-reasoner` is selectable with `--model`. CI exercises Python 3.9, 3.11 and 3.12 on Ubuntu.
 
-**Rate caching** — every `get_exchange_rate` or `convert_currency` tool call is one API request, and each request counts toward your monthly quota. Cache aggressively if the same pair is asked for repeatedly.
+**Rate caching** — every `get_exchange_rate` or `convert_currency` tool call is one API request, and each request counts toward your plan quota (the free tier is 300 lifetime requests that never reset). Cache aggressively if the same pair is asked for repeatedly.
 
 ## 🔗 Links
 
