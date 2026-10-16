@@ -40,7 +40,7 @@ Two keys are involved:
 | `ALLRATES_API_KEY` | Yes for rate lookups | Your AllRatesToday key. Get a free one at [allratestoday.com/register](https://allratestoday.com/register). |
 | `ALLRATES_BASE_URL` | No | Override the API base URL (default `https://allratestoday.com/api`). |
 
-Only `list_currencies` (`GET /api/v1/symbols`) answers without an AllRatesToday key. Rate, conversion and historical lookups all return `401` unauthenticated, so set `ALLRATES_API_KEY` for any real use.
+Only `list_currencies` (`GET /api/v1/symbols`) answers without an AllRatesToday key. Rate, conversion and historical lookups all return `401` unauthenticated, so set `ALLRATES_API_KEY` for any real use. Historical lookups (`get_historical_rates`, and `get_rates` with `time`) need a [paid plan](https://allratestoday.com/pricing); free and trial keys get `403 historical_requires_paid_plan`.
 
 ## 📦 Installation
 
@@ -107,7 +107,7 @@ python examples/raw_tool_call.py                             # drive the tool lo
 |---|---|---|---|
 | `get_exchange_rate` | Yes | `source`, `target` | Current mid-market rate for a pair. |
 | `convert_currency` | Yes | `source`, `target`, `amount` | Fetches the pair rate and multiplies — not a separate endpoint. |
-| `get_historical_rates` | Yes | `source`, `target`, `period` (`1d`/`7d`/`30d`/`1y`, default `7d`) | Time series: `1d` hourly, `7d`/`30d` daily, `1y` weekly. |
+| `get_historical_rates` | Yes (paid plan) | `source`, `target`, `period` (`1d`/`7d`/`30d`/`1y`, default `7d`) | Time series: `1d` hourly, `7d`/`30d` daily, `1y` weekly. |
 | `list_currencies` | No | — | Every supported currency with code, name and symbol. |
 
 ### `DeepSeekCurrencyAgent`
@@ -137,8 +137,8 @@ Thin `httpx` wrapper over the REST API, usable on its own.
 |---|---|---|
 | `get_rate(source, target)` | `GET /rate` | Key required by the API |
 | `list_symbols()` | `GET /v1/symbols` | None |
-| `get_historical_rates(source, target, period="7d")` | `GET /historical-rates` | Bearer key |
-| `get_rates(source, target, time=None, group=None)` | `GET /v1/rates` — comma-separated targets, `group` of `hour`/`day`/`week`/`month` | Bearer key |
+| `get_historical_rates(source, target, period="7d")` | `GET /historical-rates` | Bearer key, paid plan |
+| `get_rates(source, target, time=None, group=None)` | `GET /v1/rates` — comma-separated targets, `group` of `hour`/`day`/`week`/`month` | Bearer key (`time` needs a paid plan) |
 | `convert(source, target, amount)` | Convenience — `get_rate` × amount, rounded to 4 dp | Key required by the API |
 
 ### Tool plumbing

@@ -48,12 +48,12 @@ with DeepSeekCurrencyAgent() as agent:
 
 | 工具 | 需要密钥 | 说明 |
 |---|---|---|
-| `get_exchange_rate` | 否 | 两种货币间的实时中间价 |
-| `convert_currency` | 否 | 按实时汇率换算金额 |
-| `get_historical_rates` | 是 | `1d`、`7d`、`30d`、`1y` 历史数据 |
+| `get_exchange_rate` | 是 | 两种货币间的实时中间价 |
+| `convert_currency` | 是 | 按实时汇率换算金额 |
+| `get_historical_rates` | 是（付费套餐） | `1d`、`7d`、`30d`、`1y` 历史数据 |
 | `list_currencies` | 否 | 所有受支持货币的代码、名称和符号 |
 
-公共工具（`get_exchange_rate`、`convert_currency`、`list_currencies`）无需 API 密钥即可使用。`get_historical_rates` 需要 `ALLRATES_API_KEY`。
+只有 `list_currencies` 无需 API 密钥；汇率与换算需要 `ALLRATES_API_KEY`。`get_historical_rates` 需要付费套餐，免费密钥和试用密钥会收到 `403 historical_requires_paid_plan`。
 
 ## 环境变量
 

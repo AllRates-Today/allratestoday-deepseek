@@ -57,7 +57,7 @@ TOOLS: list[dict[str, Any]] = [
             "description": (
                 "Get historical exchange-rate data points for a currency pair over a period. "
                 "Periods: 1d (hourly), 7d (daily), 30d (daily), 1y (weekly). "
-                "Requires an AllRatesToday API key (ALLRATES_API_KEY)."
+                "Requires an AllRatesToday API key on a paid plan (free and trial keys get 403)."
             ),
             "parameters": {
                 "type": "object",

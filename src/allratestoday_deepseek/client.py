@@ -25,9 +25,11 @@ class AllRatesTodayError(RuntimeError):
 class AllRatesTodayClient:
     """Minimal client for the AllRatesToday API.
 
-    Public endpoints (no API key required): `/rate`, `/v1/symbols`.
+    Public endpoint (no API key required): `/v1/symbols`.
     Authenticated endpoints (require a bearer token via ``api_key`` or the
-    ``ALLRATES_API_KEY`` env var): `/historical-rates`, `/v1/rates`.
+    ``ALLRATES_API_KEY`` env var): `/rate`, `/v1/rates`, `/historical-rates`.
+    History (`/historical-rates`, `/v1/rates` with ``time``) needs a paid plan;
+    free and trial keys get 403 ``historical_requires_paid_plan``.
     """
 
     def __init__(
@@ -87,7 +89,7 @@ class AllRatesTodayClient:
     # ---- Authenticated ----------------------------------------------------
 
     def get_historical_rates(self, source: str, target: str, period: Period = "7d") -> dict[str, Any]:
-        """GET /historical-rates — time series over 1d/7d/30d/1y. Requires API key."""
+        """GET /historical-rates — time series over 1d/7d/30d/1y. Requires a paid-plan API key."""
         return self._get(
             "/historical-rates",
             {"source": source.upper(), "target": target.upper(), "period": period},
