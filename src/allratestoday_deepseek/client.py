@@ -8,7 +8,7 @@ from typing import Any, Literal, Optional
 import httpx
 
 DEFAULT_BASE_URL = "https://allratestoday.com/api"
-USER_AGENT = "allratestoday-deepseek/0.2.4"
+USER_AGENT = "allratestoday-deepseek/0.2.5"
 
 Period = Literal["1d", "7d", "30d", "1y"]
 

@@ -207,6 +207,7 @@ Common API statuses: `401` missing or invalid key · `429` rate limit or plan qu
 - **New in Oct 2026:** agents can self-issue a trial key — `POST https://allratestoday.com/api/agent/keys` (JSON) → 100 calls / 7 days — and read the keyless [Daily Reference Rate](https://allratestoday.com/reference-rate/) (16:00 London fix) at `https://allratestoday.com/api/open/reference-rate`
 - **Dashboard:** [allratestoday.com/profile](https://allratestoday.com/profile)
 - **GitHub:** [github.com/AllRates-Today/allratestoday-deepseek](https://github.com/AllRates-Today/allratestoday-deepseek)
+- **Open data archive:** official central-bank tables mirrored daily — [Hugging Face](https://huggingface.co/datasets/AllRatesToday/central-bank-exchange-rates) · [Kaggle](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates) (CC BY-NC 4.0)
 
 
 ## 📜 License

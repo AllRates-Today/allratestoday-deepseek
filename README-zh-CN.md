@@ -84,6 +84,7 @@ with DeepSeekCurrencyAgent() as agent:
 - **MCP 服务器**: [`@allratestoday/mcp-server`](https://www.npmjs.com/package/@allratestoday/mcp-server) —— 适用于 Claude Code、Cursor、Claude Desktop
 - **JavaScript SDK**: [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk) —— Node.js / 浏览器通用 SDK
 - **文档**: [allratestoday.com/developers](https://allratestoday.com/developers)
+- **开放数据**: 各央行官方汇率表每日镜像 —— [Hugging Face](https://huggingface.co/datasets/AllRatesToday/central-bank-exchange-rates) · [Kaggle](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)（CC BY-NC 4.0）
 
 ## 开源协议
 
