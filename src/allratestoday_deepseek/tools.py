@@ -24,7 +24,10 @@ TOOLS: list[dict[str, Any]] = [
         "type": "function",
         "function": {
             "name": "get_exchange_rate",
-            "description": "Get the current mid-market exchange rate between two currencies. Requires an AllRatesToday API key.",
+            "description": (
+                "Get the current mid-market exchange rate between two currencies. "
+                "Requires an AllRatesToday API key."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {"source": CCY, "target": CCY},
