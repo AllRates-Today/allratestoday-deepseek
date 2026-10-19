@@ -1,6 +1,6 @@
 # AllRatesToday × DeepSeek
 
-[English](./README.md) | 简体中文
+[English](https://github.com/AllRates-Today/allratestoday-deepseek/blob/main/README.md) | 简体中文
 
 > 通过函数调用，为 DeepSeek 聊天和 Agent 注入实时货币汇率、历史数据能力。
 
@@ -87,4 +87,4 @@ with DeepSeekCurrencyAgent() as agent:
 
 ## 开源协议
 
-MIT 协议 —— 详见 [LICENSE](./LICENSE) 文件。
+MIT 协议 —— 详见 [LICENSE](https://github.com/AllRates-Today/allratestoday-deepseek/blob/main/LICENSE) 文件。

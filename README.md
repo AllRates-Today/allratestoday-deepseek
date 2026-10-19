@@ -6,10 +6,10 @@ Give DeepSeek chat and agents real-time access to currency exchange rates and hi
 [![PyPI](https://img.shields.io/pypi/v/allratestoday-deepseek?label=PyPI&color=3775a9)](https://pypi.org/project/allratestoday-deepseek/)
 [![CI](https://github.com/AllRates-Today/allratestoday-deepseek/actions/workflows/ci.yml/badge.svg)](https://github.com/AllRates-Today/allratestoday-deepseek/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/AllRates-Today/allratestoday-deepseek/blob/main/LICENSE)
 [![API Status](https://img.shields.io/badge/API-Status-brightgreen)](https://allratestoday.com/status)
 
-English | [简体中文](./README-zh-CN.md)
+English | [简体中文](https://github.com/AllRates-Today/allratestoday-deepseek/blob/main/README-zh-CN.md)
 
 DeepSeek's Chat Completions API is OpenAI-compatible, so the standard `tools=` mechanism works unchanged. This package wires four currency tools into that mechanism so DeepSeek can answer questions like:
 
@@ -18,7 +18,7 @@ DeepSeek's Chat Completions API is OpenAI-compatible, so the standard `tools=` m
 - *"How has USD/INR moved over the last 30 days?"*
 - *"List every supported currency."*
 
-Rates come from the [AllRatesToday API](https://allratestoday.com) — 160 currencies, mid-market rates with no retail spread.
+Rates come from the [AllRatesToday API](https://allratestoday.com) — 160+ currencies, mid-market rates with no retail spread.
 
 ## 🚀 Features
 
@@ -26,7 +26,7 @@ Rates come from the [AllRatesToday API](https://allratestoday.com) — 160 curre
 - 🤖 **Agent wrapper** — `DeepSeekCurrencyAgent` runs the full tool-call loop for you (up to `max_tool_rounds`, default 6)
 - 💻 **CLI** — `allratestoday-deepseek` for an interactive REPL or a one-shot `--ask`
 - 🔧 **Bring your own loop** — import `TOOLS` and `dispatch_tool` and drive the OpenAI SDK yourself
-- 🌍 **160 currencies** — mid-market rates plus `1d` / `7d` / `30d` / `1y` history
+- 🌍 **160+ currencies** — mid-market rates plus `1d` / `7d` / `30d` / `1y` history
 - 🪶 **Two dependencies** — `openai` and `httpx`, nothing else
 - 🚫 **No hallucinated rates** — the system prompt instructs the model to call a tool rather than guess
 
@@ -91,7 +91,7 @@ with DeepSeekCurrencyAgent(model="deepseek-chat") as agent:
     print(agent.ask("And to GBP?", history=history))
 ```
 
-Runnable examples live in [`examples/`](examples/):
+Runnable examples live in [`examples/`](https://github.com/AllRates-Today/allratestoday-deepseek/tree/main/examples):
 
 ```bash
 python examples/ask_once.py "What's USD to EUR right now?"   # one question, then exit
@@ -154,7 +154,7 @@ result = dispatch_tool(client, "get_exchange_rate", '{"source":"USD","target":"E
 
 ## 🗺️ Currencies covered
 
-160 currencies as returned by `list_currencies`, including
+160+ currencies as returned by `list_currencies`, including
 🇺🇸 `USD` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇯🇵 `JPY` · 🇨🇭 `CHF` · 🇨🇦 `CAD` · 🇦🇺 `AUD` · 🇳🇿 `NZD` · 🇮🇳 `INR` · 🇨🇳 `CNY` · 🇧🇷 `BRL` · 🇲🇽 `MXN` · 🇹🇷 `TRY` · 🇿🇦 `ZAR` · 🇸🇬 `SGD` · 🇭🇰 `HKD` · 🇰🇷 `KRW` · 🇦🇪 `AED` · 🇱🇰 `LKR` · 🇳🇬 `NGN`.
 
 ## 🛡️ Error handling
@@ -211,4 +211,4 @@ Common API statuses: `401` missing or invalid key · `429` rate limit or plan qu
 
 ## 📜 License
 
-MIT — see [LICENSE](./LICENSE).
+MIT — see [LICENSE](https://github.com/AllRates-Today/allratestoday-deepseek/blob/main/LICENSE).
