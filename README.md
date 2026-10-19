@@ -205,6 +205,8 @@ Common API statuses: `401` missing or invalid key · `429` rate limit or plan qu
 - **JavaScript SDK:** [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk)
 - **AI agents:** Claude Code plugin `/plugin marketplace add AllRates-Today/claude-code-plugin` · hosted MCP endpoint `https://allratestoday.com/api/mcp` (keyless)
 - **New in Oct 2026:** agents can self-issue a trial key — `POST https://allratestoday.com/api/agent/keys` (JSON) → 100 calls / 7 days — and read the keyless [Daily Reference Rate](https://allratestoday.com/reference-rate/) (16:00 London fix) at `https://allratestoday.com/api/open/reference-rate`
+- **Dashboard:** [allratestoday.com/profile](https://allratestoday.com/profile)
+- **GitHub:** [github.com/AllRates-Today/allratestoday-deepseek](https://github.com/AllRates-Today/allratestoday-deepseek)
 
 
 ## 📜 License
