@@ -1,8 +1,8 @@
 """Plug real-time currency exchange rates into DeepSeek via tool calling."""
 
+from .agent import DeepSeekCurrencyAgent
 from .client import AllRatesTodayClient, AllRatesTodayError
 from .tools import TOOLS, dispatch_tool
-from .agent import DeepSeekCurrencyAgent
 
 __all__ = [
     "AllRatesTodayClient",
@@ -11,4 +11,4 @@ __all__ = [
     "dispatch_tool",
     "DeepSeekCurrencyAgent",
 ]
-__version__ = "0.2.3"
+__version__ = "0.2.4"

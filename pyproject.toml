@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "allratestoday-deepseek"
-version = "0.2.3"
+version = "0.2.4"
 description = "Plug real-time currency exchange rates into DeepSeek chat/agents via function calling — powered by the AllRatesToday API."
 readme = "README.md"
 license = { text = "MIT" }
@@ -47,3 +47,11 @@ AllRatesToday = "https://allratestoday.com/developers"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/allratestoday_deepseek"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+
+[tool.ruff.lint]
+# Explicit, so CI does not break when a new ruff release widens its default rule set.
+select = ["E", "F", "I"]

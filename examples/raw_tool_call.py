@@ -11,7 +11,7 @@ import os
 
 from openai import OpenAI
 
-from allratestoday_deepseek import AllRatesTodayClient, TOOLS, dispatch_tool
+from allratestoday_deepseek import TOOLS, AllRatesTodayClient, dispatch_tool
 
 
 def main() -> int:
