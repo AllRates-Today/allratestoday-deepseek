@@ -200,6 +200,7 @@ Common API statuses: `401` missing or invalid key · `429` rate limit or plan qu
 - **Free API key:** [allratestoday.com/register](https://allratestoday.com/register)
 - **Developer guide:** [allratestoday.com/developers](https://allratestoday.com/developers)
 - **Status:** [allratestoday.com/status](https://allratestoday.com/status)
+- [Postman collection](https://allratestoday.com/postman/)
 - **Support:** [allratestoday.com/contact](https://allratestoday.com/contact)
 - **MCP server:** [`@allratestoday/mcp-server`](https://www.npmjs.com/package/@allratestoday/mcp-server) — for Claude Code, Cursor and Claude Desktop
 - **JavaScript SDK:** [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk)
